@@ -1,0 +1,1 @@
+﻿src/app/dashboard/page.tsx(121,43): error TS2339: Property 'cell' does not exist on type 'JSX.IntrinsicElements'.
