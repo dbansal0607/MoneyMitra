@@ -119,20 +119,7 @@ npm run dev
 
 App runs at `http://localhost:3000` · API at `http://localhost:8000`
 
----
 
-## 🔑 Environment Variables
-
-Create a `.env.local` file in the `backend/` directory:
-```env
-ANTHROPIC_API_KEY=your_claude_3_5_sonnet_key
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-> ⚠️ Never commit `.env.local` — it is already in `.gitignore`
-
----
 
 ## 🧪 Testing with Sample Data
 
