@@ -44,7 +44,7 @@
 
 <br/>
 
-[🎬 Watch 3-Min Demo](#demo-video) · [⚡ Quick Setup](#local-setup) · [🏗️ Architecture](#architecture) · [📊 Impact Model](#impact-model)
+[🎬 Watch 3-Min Demo](https://drive.google.com/file/d/12KZKGRFLZ8UgDX_L-IjJchJ9abU142Zr/view?usp=drive_link) · [⚡ Quick Setup](#local-setup) · [🏗️ Architecture](#architecture) · [📊 Impact Model](#impact-model)
 
 </div>
 
@@ -186,7 +186,7 @@ Full model with assumptions: [`docs/impact_model.md`](./docs/impact_model.md)
 
 ## 🎬 Demo Video
 
-> 👉 **[Watch the 3-Minute Pitch Video](#)**
+> 👉 **[Watch the 3-Minute Pitch Video](https://drive.google.com/file/d/12KZKGRFLZ8UgDX_L-IjJchJ9abU142Zr/view?usp=drive_link)**
 
 The video walks through the complete flow:
 `Landing Page` → `CAMS PDF Upload` → `Agent Execution Terminal` → `Portfolio X-Ray` → `Health Radar` → `FIRE Monte Carlo` → `Live Market Radar` → `AI Narrative`
