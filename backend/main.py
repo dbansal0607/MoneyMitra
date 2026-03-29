@@ -1,10 +1,15 @@
-import uvicorn
-from fastapi import FastAPI, UploadFile, File, Form
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+import uvicorn  # type: ignore
+from fastapi import FastAPI, UploadFile, File, Form  # type: ignore
+from fastapi.middleware.cors import CORSMiddleware  # type: ignore
+from pydantic import BaseModel  # type: ignore
 import json
-from graph import app_graph
-from core.state import AppState
+try:
+    from graph import app_graph  # type: ignore
+    from core.state import AppState  # type: ignore
+except ImportError:
+    # Handle both execution contexts
+    from .graph import app_graph  # type: ignore
+    from .core.state import AppState  # type: ignore
 
 app = FastAPI(title="MoneyMitra API", description="Backend for MoneyMitra AI Financial Advisor")
 
@@ -43,7 +48,7 @@ async def analyze_portfolio(
     pdf_bytes = await file.read()
     user_profile = json.loads(profile)
     
-    state: AppState = {
+    state = {
         "raw_pdf_bytes": pdf_bytes,
         "user_profile": user_profile,
         "audit_trail": []
@@ -58,7 +63,7 @@ async def analyze_portfolio(
 
 @app.post("/api/health-score")
 async def get_health_score(profile: HealthProfile):
-    state: AppState = {
+    state = {
         "raw_pdf_bytes": None,
         "user_profile": profile.model_dump(),
         "audit_trail": []
@@ -68,7 +73,7 @@ async def get_health_score(profile: HealthProfile):
 
 @app.post("/api/fire-plan")
 async def get_fire_plan(profile: FireProfile):
-    state: AppState = {
+    state = {
         "raw_pdf_bytes": None,
         "user_profile": {"monthly_expenses": profile.monthly_expenses, "goals": profile.goals},
         "audit_trail": []
